@@ -1,0 +1,31 @@
+[
+ {
+  "id": "vip_repeat",
+  "customer_id": "CUST-9001",
+  "subject": "Question About My Latest Invoice",
+  "body": "Dear Customer Support Team,\n\nI hope you are well. I noticed that the total on my most recent invoice looks slightly different from previous months, and I would like to understand what is included in the charges. Could you please confirm the breakdown?\n\nThank you for your help.",
+  "expected_action": "escalate",
+  "expected_queue": "Billing and Payments",
+  "why": "Text alone reads as a routine invoice question, but the customer is premium, high churn risk, and has 4 prior billing-discrepancy tickets. Context should drive escalation."
+ },
+ {
+  "id": "first_time_match",
+  "customer_id": "CUST-9002",
+  "subject": "Question About How Billing Works",
+  "body": "Hello,\n\nI'm new to your service and would like to understand how billing works. When are invoices issued, how soon do they need to be paid, which payment methods do you accept, and are there any fees for paying late?\n\nThanks in advance.",
+  "expected_action": "auto_resolve",
+  "expected_queue": "Billing and Payments",
+  "expected_type": "Request",
+  "expected_source_ticket_id": "T00034",
+  "why": "First-time standard customer; a near-identical past ticket exists with a clear resolution. Should auto-resolve and cite that resolution."
+ },
+ {
+  "id": "ambiguous",
+  "customer_id": "CUST-9003",
+  "subject": "Still Not Working",
+  "body": "Hi,\n\nIt's still not working. I already tried what you suggested last time and nothing has changed. Please sort this out as soon as possible.\n\nThanks.",
+  "expected_action": "escalate",
+  "expected_queue": null,
+  "why": "No product, symptom or error is named; retrieval has nothing specific to match and the customer's two prior tickets are in unrelated queues. Should escalate on low confidence, not guess."
+ }
+]

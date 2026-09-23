@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat \"/c/Users/hp/AppData/Local/Temp/claude/c--Users-hp-Desktop-AI-projects-Ticket-triage-agent/072687e7-de72-48a4-9248-d7b27151adb9/tasks/b1yo5e5gw.output\" | tail -15)",
+      "Read(//c/Users/hp/AppData/Local/Temp/claude/c--Users-hp-Desktop-AI-projects-Ticket-triage-agent/072687e7-de72-48a4-9248-d7b27151adb9/tasks/**)"
+    ]
+  }
+}

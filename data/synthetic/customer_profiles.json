@@ -1,0 +1,1900 @@
+{
+ "CUST-0001": {
+  "name": "Allison Hill",
+  "email": "donaldgarcia@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1123,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T09328",
+    "summary": "Customer Support, I am reaching out to inquire about a scalable SaaS project man...",
+    "queue": "Technical Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T15419",
+    "summary": "Asking for Enhancements in Digital Strategy Tools",
+    "queue": "Technical Support",
+    "type": "Change",
+    "priority": "medium",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T15528",
+    "summary": "Avid Pro Tools SaaS Integration Inquiry",
+    "queue": "Technical Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T23837",
+    "summary": "Support for Smart Licht on MacOS Monterey",
+    "queue": "Technical Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0002": {
+  "name": "Angie Henderson",
+  "email": "davisjesse@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 730,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T19070",
+    "summary": "Inquiry About Product Features",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0003": {
+  "name": "Cristian Santos",
+  "email": "lrobinson@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1358,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T18887",
+    "summary": "Query on Customer Support Services",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Feedback"
+   },
+   {
+    "ticket_id": "T21003",
+    "summary": "Customized Digital Strategies for Brand Growth",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feedback"
+   },
+   {
+    "ticket_id": "T21974",
+    "summary": "Request for Guidance on Data Analytics Services",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feedback"
+   },
+   {
+    "ticket_id": "T27549",
+    "summary": "Enhancing Brand Expansion Techniques",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Feedback"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0004": {
+  "name": "Abigail Shaffer",
+  "email": "jpeterson@example.org",
+  "vip_tier": "premium",
+  "account_age_days": 161,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T21906",
+    "summary": "Please Update Our Product Offerings",
+    "queue": "Sales and Pre-Sales",
+    "type": "Change",
+    "priority": "medium",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0005": {
+  "name": "Gabrielle Davis",
+  "email": "howardmaurice@example.com",
+  "vip_tier": "premium",
+  "account_age_days": 601,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T12318",
+    "summary": "Problem with Investment Analytics Dashboard",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T16478",
+    "summary": "Concerning Precision of Investment Optimization Model",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T19571",
+    "summary": "Problem with Hospital Data Accessibility",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T21889",
+    "summary": "Investigation Required for Investment Analysis Projections Error",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T23562",
+    "summary": "Hello Customer Support, I am reaching out regarding the issues with our digital...",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 5
+ },
+ "CUST-0006": {
+  "name": "Monica Herrera",
+  "email": "smiller@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1784,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T15549",
+    "summary": "Customer Support, we are writing to request an enhancement in the integration fe...",
+    "queue": "Product Support",
+    "type": "Change",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0007": {
+  "name": "Shannon Ray",
+  "email": "williamsjeremy@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 596,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T11141",
+    "summary": "Detected Security Breach in Healthcare System",
+    "queue": "Returns and Exchanges",
+    "type": "Problem",
+    "priority": "low",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0008": {
+  "name": "Dr. Sharon James",
+  "email": "xreid@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1759,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T04242",
+    "summary": "Issue with Billing System Charges",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T04577",
+    "summary": "SaaS Payment Plans and Billing Choices",
+    "queue": "Billing and Payments",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T21154",
+    "summary": "Seeking Clarification on Billing Structure and Payment Options",
+    "queue": "Billing and Payments",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0009": {
+  "name": "Daniel Adams",
+  "email": "lynchgeorge@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 499,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T01317",
+    "summary": "Project Problem",
+    "queue": "IT Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Outage"
+   },
+   {
+    "ticket_id": "T13232",
+    "summary": "Support Inquiry Concerning System Downtime",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Outage"
+   },
+   {
+    "ticket_id": "T23073",
+    "summary": "Dear Customer Support, I am reporting an unexpected system downtime that occurre...",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Outage"
+   },
+   {
+    "ticket_id": "T24855",
+    "summary": "Issues with Data Analytics Tools Leading to Downtime",
+    "queue": "IT Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Outage"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0010": {
+  "name": "Joel Nelson",
+  "email": "gabriellecameron@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1423,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T14846",
+    "summary": "Improve Safety Measures for Medical Data",
+    "queue": "Technical Support",
+    "type": "Change",
+    "priority": "medium",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0011": {
+  "name": "Andrew Stewart",
+  "email": "carl95@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 43,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T12092",
+    "summary": "Inquiry About Scalable SaaS Features and Integration Options",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0012": {
+  "name": "Jennifer Rocha",
+  "email": "ithomas@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 2080,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T25060",
+    "summary": "Detection of Unauthorized Access to Medical Data Systems",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0013": {
+  "name": "Kimberly Burgess",
+  "email": "zhurst@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 32,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T09886",
+    "summary": "Data Synchronization Issue",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T11754",
+    "summary": "Problem with Task Synchronization",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T16124",
+    "summary": "Emergency: Critical Bug in Project Management SaaS Integration Causing Disruptions",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T18782",
+    "summary": "Hello Customer Support, I am encountering an issue with the data analytics tools...",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T24232",
+    "summary": "Help with Integration Problems",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 5
+ },
+ "CUST-0014": {
+  "name": "Zachary Hicks",
+  "email": "camposmichelle@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 352,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03388",
+    "summary": "Failure in Financial System",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T13869",
+    "summary": "Problem with Marketing Campaign Launch Delays",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T13897",
+    "summary": "Software Crashes During Data Analysis Sessions",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T16396",
+    "summary": "Misleading Data in Investment Analytics Reports",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0015": {
+  "name": "Rebecca Henderson",
+  "email": "cruzcaitlin@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 545,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T13505",
+    "summary": "Enhancing Investment Analytics",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0016": {
+  "name": "Tricia Valencia",
+  "email": "frazierdanny@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 706,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T13198",
+    "summary": "Concerns Raised About Marketing Campaign Engagement",
+    "queue": "Returns and Exchanges",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Feedback"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0017": {
+  "name": "Patricia Peterson",
+  "email": "ryan70@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 897,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T24980",
+    "summary": "Request for Information on Integrating Smartsheet Scalable SaaS Project Management",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0018": {
+  "name": "Deborah Mason",
+  "email": "williamrodriguez@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 853,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T21319",
+    "summary": "Customer Support,\nWe are writing to report an incident of potential security bre...",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "low",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0019": {
+  "name": "Mark Lynch",
+  "email": "nathanielmartin@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1559,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T11139",
+    "summary": "Concern Regarding Task Sync Feature",
+    "queue": "Technical Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0020": {
+  "name": "Linda Burns",
+  "email": "hickmannatasha@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1045,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T14348",
+    "summary": "Problem with Digital Marketing Services",
+    "queue": "Billing and Payments",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0021": {
+  "name": "David Bradley",
+  "email": "millertodd@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 271,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T00065",
+    "summary": "Network Connectivity Problems Impacting Medical Equipment",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Network"
+   },
+   {
+    "ticket_id": "T02501",
+    "summary": "Problem with the Project Management System",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Network"
+   },
+   {
+    "ticket_id": "T10126",
+    "summary": "Problem with Google Nest Wifi Router",
+    "queue": "IT Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Network"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0022": {
+  "name": "Kim Martinez",
+  "email": "karroyo@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 907,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T06822",
+    "summary": "Report of Security Breach",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Security"
+   },
+   {
+    "ticket_id": "T07924",
+    "summary": "Secure Medical Data Configuration Inquiry",
+    "queue": "Technical Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Security"
+   },
+   {
+    "ticket_id": "T14030",
+    "summary": "Request for Security Improvements",
+    "queue": "Technical Support",
+    "type": "Change",
+    "priority": "low",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0023": {
+  "name": "Lisa Brandt",
+  "email": "jenniferross@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1966,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T20336",
+    "summary": "A system outage has disrupted our data analytics processes. The issue may be rel...",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Outage"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0024": {
+  "name": "Jessica Holmes",
+  "email": "wrightcaleb@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1942,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T10838",
+    "summary": "Marketing Campaigns Performing Poorly Lately",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Feedback"
+   },
+   {
+    "ticket_id": "T22180",
+    "summary": "Support for Analytics Measurement",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Feedback"
+   },
+   {
+    "ticket_id": "T24995",
+    "summary": "NZXT Marketing Support Inquiry",
+    "queue": "Product Support",
+    "type": "Change",
+    "priority": "high",
+    "tag_1": "Feedback"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0025": {
+  "name": "Crystal Robinson",
+  "email": "zimmermanbrian@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 433,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T01399",
+    "summary": "Revise Billing Procedure",
+    "queue": "Billing and Payments",
+    "type": "Change",
+    "priority": "high",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0026": {
+  "name": "Shannon Jones",
+  "email": "joshuawashington@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 477,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T20479",
+    "summary": "Integration of Mercurial for Data Analytics in Investment Optimization",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Documentation"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0027": {
+  "name": "Timothy Duncan",
+  "email": "esanchez@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 604,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T05085",
+    "summary": "QuickBooks Connection Setup",
+    "queue": "Sales and Pre-Sales",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Product"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0028": {
+  "name": "Brent Jordan",
+  "email": "ujenkins@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 338,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T07629",
+    "summary": "Multiple Integration Failures Following Recent API Changes",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0029": {
+  "name": "Victoria Garcia",
+  "email": "zchandler@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 431,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T24670",
+    "summary": "Dear Customer Support, I am reporting a critical issue with the data integration...",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0030": {
+  "name": "Connor West",
+  "email": "dwhite@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 412,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T14980",
+    "summary": "Enhance Security for Medical Data in Hospital Systems",
+    "queue": "Product Support",
+    "type": "Change",
+    "priority": "medium",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0031": {
+  "name": "Angela Morton",
+  "email": "williamsyvette@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1694,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T24244",
+    "summary": "Systems for Security Breach",
+    "queue": "Customer Service",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0032": {
+  "name": "Tammy Allison",
+  "email": "richardolson@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 270,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T05758",
+    "summary": "Problem with Medical Data Security",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "low",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0033": {
+  "name": "Carmen Smith",
+  "email": "ybaker@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 2023,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T09845",
+    "summary": "Customer Support, I am bringing to your attention the need to update billing int...",
+    "queue": "Billing and Payments",
+    "type": "Change",
+    "priority": "low",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T14352",
+    "summary": "Problem with Monthly Subscription Payment",
+    "queue": "Billing and Payments",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T23874",
+    "summary": "Issues with Billing for Various Products Seeking Help",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T25371",
+    "summary": "Problem with Monthly Invoices",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0034": {
+  "name": "Michael Cross",
+  "email": "smoore@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 269,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T08174",
+    "summary": "System Performance Concerns",
+    "queue": "Technical Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0035": {
+  "name": "Lauren Daniels",
+  "email": "brian97@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 674,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T01595",
+    "summary": "Project Postponement",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "low",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T10691",
+    "summary": "Support for Marketing Campaign Performance",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T16268",
+    "summary": "Problem with Traffic Decline",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0036": {
+  "name": "Kim Brown",
+  "email": "yorkcasey@example.org",
+  "vip_tier": "premium",
+  "account_age_days": 791,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T14121",
+    "summary": "Problem with SaaS Integration",
+    "queue": "IT Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Network"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0037": {
+  "name": "Cynthia Wilson",
+  "email": "bethwilliams@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 2171,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03090",
+    "summary": "Customer support is documenting a critical security incident. A healthcare provi...",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Security"
+   },
+   {
+    "ticket_id": "T05127",
+    "summary": "Solutions for Securing Medical Data in Hospital Settings",
+    "queue": "Billing and Payments",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Security"
+   },
+   {
+    "ticket_id": "T07261",
+    "summary": "Patient Data Protection",
+    "queue": "Billing and Payments",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Security"
+   },
+   {
+    "ticket_id": "T14324",
+    "summary": "Support Needed for Possible Data Breach",
+    "queue": "Billing and Payments",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0038": {
+  "name": "Kevin Mills",
+  "email": "james53@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1258,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T02152",
+    "summary": "Data Discrepancy",
+    "queue": "Human Resources",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T04715",
+    "summary": "Digital Campaign Performance Decline This Quarter",
+    "queue": "Human Resources",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T06012",
+    "summary": "Financial Data Processing Problem",
+    "queue": "Human Resources",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T06291",
+    "summary": "Digital Strategies Completely Unsuccessful",
+    "queue": "Human Resources",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0039": {
+  "name": "Michael Evans",
+  "email": "sarah10@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 327,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T26888",
+    "summary": "Secure Medical Data in Hospitals",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0040": {
+  "name": "Kristine Garcia",
+  "email": "williamanderson@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 439,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T17387",
+    "summary": "Support Required for Enhancing Investment Analytics Optimization",
+    "queue": "IT Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0041": {
+  "name": "Sherry Wood",
+  "email": "samueldaniels@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 572,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T05753",
+    "summary": "Digital Marketing Assistance",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Feedback"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0042": {
+  "name": "Victoria Valdez",
+  "email": "contrerasangela@example.net",
+  "vip_tier": "premium",
+  "account_age_days": 1030,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T25322",
+    "summary": "Notice of Billing Discrepancies Across Various Services",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0043": {
+  "name": "Shawn Baker",
+  "email": "newtoneric@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1269,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T04193",
+    "summary": "Inquiry Regarding Scalability and Integration Capabilities of SaaS Platform",
+    "queue": "IT Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0044": {
+  "name": "Michelle Harris",
+  "email": "william40@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 62,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T23010",
+    "summary": "Concern Regarding Data Analytics Tools Performance",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0045": {
+  "name": "Sandra Williams",
+  "email": "kellie42@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 454,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T15441",
+    "summary": "Request for Details on Digital Strategy Services to Enhance Brand Growth",
+    "queue": "Technical Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feedback"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0046": {
+  "name": "Michael Hoffman",
+  "email": "jonesnicole@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 468,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03567",
+    "summary": "IBM SPSS Assistance Required",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0047": {
+  "name": "Sandra Aguilar",
+  "email": "russellwilliams@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1111,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T09987",
+    "summary": "Seeking information on data analytics solutions for investment optimization. Cou...",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T13858",
+    "summary": "Support Inquiry for Project Management SaaS",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T27968",
+    "summary": "Enhancing Investment Analytics Practices",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0048": {
+  "name": "Rebecca Valencia",
+  "email": "jason31@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 238,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T06850",
+    "summary": "Issues with Hospital Data Security System",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0049": {
+  "name": "Stacey Russell",
+  "email": "sarayoung@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 210,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T11844",
+    "summary": "Request for Assistance with Security Breach in Medical Data Management System",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0050": {
+  "name": "Rita Keith",
+  "email": "whitesandra@example.com",
+  "vip_tier": "premium",
+  "account_age_days": 1102,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T21871",
+    "summary": "Support Required for Software Crash",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0051": {
+  "name": "Sharon Cochran",
+  "email": "erik16@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1781,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T12343",
+    "summary": "Notify About Unauthorised Access Occurrence",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0052": {
+  "name": "Courtney Velasquez",
+  "email": "ybailey@example.org",
+  "vip_tier": "premium",
+  "account_age_days": 640,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T02941",
+    "summary": "Digital Marketing Agency",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Disruption"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0053": {
+  "name": "Matthew Ross",
+  "email": "michelle45@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 636,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T23862",
+    "summary": "Support for AutoCAD and Squarespace Subscriptions",
+    "queue": "Billing and Payments",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0054": {
+  "name": "Meghan Anthony",
+  "email": "sheila14@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 193,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T01087",
+    "summary": "Request for Assistance with Smart Home Camera Support",
+    "queue": "Human Resources",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Product"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0055": {
+  "name": "Victoria Johnson",
+  "email": "yreed@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 663,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T14241",
+    "summary": "Microsoft Dynamics 365 Integration Options Available",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T15825",
+    "summary": "Dear Customer Support, we are writing to request enhancements for our data analy...",
+    "queue": "Customer Service",
+    "type": "Change",
+    "priority": "low",
+    "tag_1": "Feature"
+   },
+   {
+    "ticket_id": "T21681",
+    "summary": "Request for Information on Integrating Xero Project Management SaaS",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0056": {
+  "name": "William Wilson",
+  "email": "jonathanfletcher@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1390,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T00073",
+    "summary": "Critical Support Needed for Cloud-Native SaaS System Disruption Affecting Business Functions",
+    "queue": "Customer Service",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Disruption"
+   },
+   {
+    "ticket_id": "T00563",
+    "summary": "Alert",
+    "queue": "Customer Service",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Disruption"
+   },
+   {
+    "ticket_id": "T06046",
+    "summary": "Customer Support, a financial organization has encountered disruptions with MS T...",
+    "queue": "Customer Service",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Disruption"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0057": {
+  "name": "Renee Mcdaniel",
+  "email": "michaeljones@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1046,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T11552",
+    "summary": "Customer Support, we are reaching out to inquire about the SaaS features your co...",
+    "queue": "Product Support",
+    "type": "Request",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0058": {
+  "name": "Lisa Alvarado",
+  "email": "cortezkevin@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1596,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T22433",
+    "summary": "Asking for Improved Notifications",
+    "queue": "Customer Service",
+    "type": "Change",
+    "priority": "medium",
+    "tag_1": "Feedback"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0059": {
+  "name": "Erika Terry",
+  "email": "jamesortega@example.com",
+  "vip_tier": "premium",
+  "account_age_days": 821,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T13609",
+    "summary": "Issues with Marketing Tools Impacting Brand Growth",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T13733",
+    "summary": "Problem with SaaS Project Management Integration Encountered",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T17068",
+    "summary": "Problem with Medical Data System Access",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T18795",
+    "summary": "Support for Vagrant and Docker Problems",
+    "queue": "Technical Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0060": {
+  "name": "Stephanie Gilbert",
+  "email": "richard04@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 1173,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T07659",
+    "summary": "Unauthorized Intrusion into Hospital Networks",
+    "queue": "Human Resources",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Security"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0061": {
+  "name": "Richard Lawson",
+  "email": "steven73@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1386,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T14202",
+    "summary": "Problem with Avid Pro Tools Crashing Identified",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0062": {
+  "name": "Steven Flynn",
+  "email": "donnacampbell@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1099,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03028",
+    "summary": "Information on Data Analytics Tools Employed",
+    "queue": "Human Resources",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Product"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0063": {
+  "name": "Frances Cardenas",
+  "email": "emilywalker@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 186,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T28004",
+    "summary": "Inquiring for comprehensive documentation to integrate PostgreSQL into a project...",
+    "queue": "Customer Service",
+    "type": "Request",
+    "priority": "low",
+    "tag_1": "Documentation"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0064": {
+  "name": "Angel Riggs",
+  "email": "gibsonolivia@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 808,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03012",
+    "summary": "Problem with Project Updates",
+    "queue": "Product Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T09129",
+    "summary": "Marketing Campaign Performance Inquiry",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T11982",
+    "summary": "Marketing Campaigns Performance Issues",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T17456",
+    "summary": "Concern Regarding Investment Data Processing",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 4
+ },
+ "CUST-0065": {
+  "name": "Michael Snyder",
+  "email": "dylanwatts@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1315,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03911",
+    "summary": "Healthcare System Problem",
+    "queue": "Service Outages and Maintenance",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T10399",
+    "summary": "Problem with Data Analytics",
+    "queue": "Service Outages and Maintenance",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T13455",
+    "summary": "Reported Issue",
+    "queue": "Service Outages and Maintenance",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T14555",
+    "summary": "Assistance with Technical Problems at Marketing Agency",
+    "queue": "Service Outages and Maintenance",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T17287",
+    "summary": "Implement Real-Time Status Updates for Impacted Products",
+    "queue": "Service Outages and Maintenance",
+    "type": "Change",
+    "priority": "high",
+    "tag_1": "Bug"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 5
+ },
+ "CUST-0066": {
+  "name": "Colleen Brock",
+  "email": "pwilliams@example.org",
+  "vip_tier": "standard",
+  "account_age_days": 1260,
+  "churn_risk": "low",
+  "prior_tickets": [
+   {
+    "ticket_id": "T03294",
+    "summary": "I am seeking assistance from the customer support team regarding the stagnation...",
+    "queue": "Technical Support",
+    "type": "Problem",
+    "priority": "medium",
+    "tag_1": "Customer Support"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0067": {
+  "name": "Robert Contreras",
+  "email": "stephanie79@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1678,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T18738",
+    "summary": "faced frequent delays in data processing for the weekly analytics run. This coul...",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0068": {
+  "name": "Jessica Meadows",
+  "email": "vmerritt@example.com",
+  "vip_tier": "premium",
+  "account_age_days": 1752,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T15480",
+    "summary": "Request for Information on QuickBooks Online Investment Analytics Tools",
+    "queue": "Returns and Exchanges",
+    "type": "Request",
+    "priority": "medium",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 1
+ },
+ "CUST-0069": {
+  "name": "Paul Larsen",
+  "email": "katie87@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 1274,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T08564",
+    "summary": "Customer Support, reporting an issue with the project dashboard. The dashboard i...",
+    "queue": "IT Support",
+    "type": "Problem",
+    "priority": "low",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T15252",
+    "summary": "Concerns with the Data Analytics Platform",
+    "queue": "IT Support",
+    "type": "Problem",
+    "priority": "high",
+    "tag_1": "Performance"
+   },
+   {
+    "ticket_id": "T27947",
+    "summary": "The user has reported inconsistent loading times for the project management dash...",
+    "queue": "IT Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Performance"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 3
+ },
+ "CUST-0070": {
+  "name": "Jeremiah Reeves",
+  "email": "josephflores@example.net",
+  "vip_tier": "standard",
+  "account_age_days": 725,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T04725",
+    "summary": "Intermittent Connectivity Problems Due to MySQL Server Overload",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Network"
+   },
+   {
+    "ticket_id": "T07704",
+    "summary": "Assistance Needed for Product Connectivity Problem",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Network"
+   },
+   {
+    "ticket_id": "T16910",
+    "summary": "Problem with Network Connectivity Among Various Devices",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Network"
+   },
+   {
+    "ticket_id": "T18482",
+    "summary": "Connectivity Issues Across Software Platforms",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Network"
+   },
+   {
+    "ticket_id": "T24370",
+    "summary": "Query for Support on Connectivity Issues",
+    "queue": "Product Support",
+    "type": "Incident",
+    "priority": "medium",
+    "tag_1": "Network"
+   }
+  ],
+  "hand_authored": false,
+  "prior_ticket_count": 5
+ },
+ "CUST-9001": {
+  "name": "Dana Whitfield",
+  "email": "dana.whitfield@example.com",
+  "vip_tier": "premium",
+  "account_age_days": 1460,
+  "churn_risk": "high",
+  "prior_tickets": [
+   {
+    "ticket_id": "T00113",
+    "summary": "Inconsistency in Billing Charges",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T00117",
+    "summary": "Invoice Discrepancy Concern",
+    "queue": "Billing and Payments",
+    "type": "Problem",
+    "priority": "low",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T00119",
+    "summary": "Billing Discrepancy Across Multiple Items",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Billing"
+   },
+   {
+    "ticket_id": "T00157",
+    "summary": "Billing Inconsistency on Multi-Product Invoice",
+    "queue": "Billing and Payments",
+    "type": "Incident",
+    "priority": "low",
+    "tag_1": "Billing"
+   }
+  ],
+  "hand_authored": true,
+  "prior_ticket_count": 4
+ },
+ "CUST-9002": {
+  "name": "Marcus Lindqvist",
+  "email": "marcus.lindqvist@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 12,
+  "churn_risk": "low",
+  "prior_tickets": [],
+  "hand_authored": true,
+  "prior_ticket_count": 0
+ },
+ "CUST-9003": {
+  "name": "Priya Raman",
+  "email": "priya.raman@example.com",
+  "vip_tier": "standard",
+  "account_age_days": 310,
+  "churn_risk": "medium",
+  "prior_tickets": [
+   {
+    "ticket_id": "T00035",
+    "summary": "Urgent: Ongoing System Failures Disrupting EMR/PACS Telehealth Services",
+    "queue": "Technical Support",
+    "type": "Incident",
+    "priority": "high",
+    "tag_1": "Bug"
+   },
+   {
+    "ticket_id": "T00231",
+    "summary": "Unified Management Integration",
+    "queue": "Product Support",
+    "type": "Change",
+    "priority": "high",
+    "tag_1": "Feature"
+   }
+  ],
+  "hand_authored": true,
+  "prior_ticket_count": 2
+ }
+}
