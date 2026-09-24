@@ -46,3 +46,12 @@ ACTIONS = ["auto_resolve", "route", "escalate"]
 AUTO_RESOLVE_MIN_SCORE = 0.02  # hybrid top-1 RRF score (pool=20, rrf_k=60); ceiling is ~0.033 for this config
 VIP_REPEAT_MIN_PRIOR = 3  # prior_ticket_count at/above which a premium customer's repeat pattern forces escalation
 MAX_AGENT_TURNS = 6  # safety cap on the tool-calling loop
+
+# --- Cache (Phase 6) ---
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
+CACHE_TTL_SECONDS = int(os.getenv("CACHE_TTL_SECONDS", str(7 * 24 * 3600)))  # 7 days
+
+# --- Observability (Phase 6) ---
+LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY")
+LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY")
+LANGFUSE_BASE_URL = os.getenv("LANGFUSE_BASE_URL")

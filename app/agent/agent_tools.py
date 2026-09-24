@@ -7,18 +7,32 @@ the agent itself needs to make.
 """
 from langchain_core.tools import StructuredTool, tool
 
-from app.agent.schemas import Decision
+from app.models.decision import Decision
 from app.tools.get_customer_context import get_customer_context as _get_customer_context
 from app.tools.search_past_tickets import search_past_tickets as _search_past_tickets
+
+ANSWER_CHAR_CAP = 500  # dataset median ~386 chars, so this rarely truncates a real resolution
+
+
+def _trim_hit(hit: dict) -> dict:
+    # Drop `body` - the past ticket's own question text. It's redundant for the LLM's purposes: judging
+    # similarity is already done by search (score) plus subject/tags, and the thing actually worth reusing
+    # is `answer`. Dropping it is the single biggest token saving here (full past-ticket bodies were being
+    # sent back for every one of k=5 hits, on every search call, and staying in context for the rest of the
+    # trajectory) - this is what let a handful of eval runs burn through Groq's daily token quota.
+    answer = hit["answer"]
+    if len(answer) > ANSWER_CHAR_CAP:
+        answer = answer[:ANSWER_CHAR_CAP] + "... [truncated]"
+    return {k: v for k, v in hit.items() if k != "body"} | {"answer": answer}
 
 
 @tool
 def search_past_tickets(query: str, k: int = 5) -> list[dict]:
     """Search resolved past support tickets for ones similar to the given text. Returns up to k matches,
     each with ticket_id, score (higher = more similar; roughly: >0.02 means a real precedent exists, well
-    below that means this situation has little precedent), subject, body, answer (the past resolution),
-    queue, type, priority, tag_1. Use the incoming ticket's own subject+body as the query."""
-    return _search_past_tickets(query, mode="hybrid", k=k)
+    below that means this situation has little precedent), subject, answer (the past resolution), queue,
+    type, priority, tag_1. Use the incoming ticket's own subject+body as the query."""
+    return [_trim_hit(h) for h in _search_past_tickets(query, mode="hybrid", k=k)]
 
 
 @tool
