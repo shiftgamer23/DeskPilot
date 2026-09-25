@@ -31,6 +31,8 @@ def _run_summary(run: Run) -> dict:
         "action": r.get("action"),
         "queue": r.get("queue"),
         "confidence": r.get("confidence"),
+        "justification": r.get("justification"),
+        "cached": r.get("cached"),
     }
 
 
@@ -59,7 +61,7 @@ async def submit_ticket(req: TicketRequest) -> TicketAck:
 
 
 @router.get("/tickets")
-def list_tickets(limit: int = 50) -> list[dict]:
+def list_tickets(limit: int = 200) -> list[dict]:
     return [_run_summary(r) for r in store.list(limit)]
 
 
