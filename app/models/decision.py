@@ -1,11 +1,12 @@
 """The agent's final decision, as a Pydantic schema. Used two ways:
-  1. As the args schema for the `submit_decision` tool - the LLM can only "finish" by filling this out,
-     which is what guarantees structured output (native tool-calling), not prompt-and-hope JSON parsing.
+  1. As the args schema for the `submit_decision` tool (app/agent/agent_tools.py) - the LLM can only
+     "finish" by filling this out, which is what guarantees structured output (native tool-calling), not
+     prompt-and-hope JSON parsing.
   2. As the shape returned by the API/eval (after the deterministic gate has had a chance to override it).
 """
 from typing import Literal, Optional
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from app import config
 
@@ -28,6 +29,13 @@ class Decision(BaseModel):
         description="Required when action=auto_resolve: the ticket_id (from search_past_tickets results) whose "
         "resolution you are reusing. Must be one of the ticket_ids actually returned by that tool.",
     )
+
+    @field_validator("justification")
+    @classmethod
+    def _normalize_unicode_quirks(cls, v: str) -> str:
+        # These models like to emit U+2011 (non-breaking hyphen) instead of a plain "-"; same fix as
+        # applied to the LLM-generated account notes in data/generate_customer_profiles.py.
+        return v.replace("‑", "-")
 
 
 class GatedDecision(Decision):

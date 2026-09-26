@@ -15,10 +15,11 @@ Two things are deliberately NOT trusted at face value from the LLM:
 Both overrides are recorded on the output (gate_overridden, gate_reason) rather than applied silently.
 """
 import json
+import time
 from functools import lru_cache
 from typing import Annotated, Optional
 
-from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage, ToolMessage
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage, ToolMessage
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 from typing_extensions import TypedDict
@@ -26,7 +27,8 @@ from typing_extensions import TypedDict
 from app import config
 from app.agent.agent_tools import AGENT_TOOLS
 from app.agent.prompts import SYSTEM_PROMPT, ticket_message
-from app.agent.schemas import Decision, GatedDecision
+from app.infra import tracing
+from app.models.decision import Decision, GatedDecision
 from app.llm.provider import get_llm
 
 NUDGE = (
@@ -52,8 +54,18 @@ _TOOL_MAP = {t.name: t for t in AGENT_TOOLS}
 
 def agent_node(state: AgentState) -> dict:
     llm = _bound_llm(state.get("_provider"))
-    response = llm.invoke(state["messages"])
-    return {"messages": [response], "turns": state["turns"] + 1}
+    error = None
+    for attempt in range(3):
+        try:
+            response = llm.invoke(state["messages"])
+            return {"messages": [response], "turns": state["turns"] + 1}
+        except Exception as e:  # e.g. Groq's gpt-oss models occasionally emit a malformed tool call
+            error = e
+            time.sleep(0.5 * (attempt + 1))
+    # All retries failed. Don't crash the run - fall through as if the model said nothing, so the
+    # existing route_after_agent -> nudge/fallback path handles it the same as any other stuck turn.
+    note = f"[LLM call failed after retries: {type(error).__name__}: {error}]"
+    return {"messages": [AIMessage(content=note)], "turns": state["turns"] + 1}
 
 
 def route_after_agent(state: AgentState) -> str:
@@ -81,7 +93,7 @@ def tools_node(state: AgentState) -> dict:
             result = _TOOL_MAP[name].invoke(tc["args"])
         except Exception as e:  # a malformed call (e.g. bad enum value) becomes visible tool feedback, not a crash
             result = {"error": f"{type(e).__name__}: {e}"}
-        tool_msgs.append(ToolMessage(content=json.dumps(result, default=str), tool_call_id=tc["id"]))
+        tool_msgs.append(ToolMessage(content=json.dumps(result, default=str), tool_call_id=tc["id"], name=name))
         tools_called.append(name)
         if name == "search_past_tickets" and isinstance(result, list):
             retrieval_hits.extend(result)
@@ -176,9 +188,8 @@ def _compiled_graph():
     return g.compile()
 
 
-def run_triage(subject: str | None, body: str, customer_id: str | None = None, provider: str | None = None) -> dict:
-    """Runs one ticket through the full agent loop. Returns a GatedDecision dict (see app/agent/schemas.py)."""
-    initial_state: AgentState = {
+def _initial_state(subject: str | None, body: str, customer_id: str | None, provider: str | None) -> AgentState:
+    return {
         "messages": [SystemMessage(SYSTEM_PROMPT), HumanMessage(ticket_message(subject, body, customer_id))],
         "tools_called": [],
         "retrieval_hits": [],
@@ -188,5 +199,93 @@ def run_triage(subject: str | None, body: str, customer_id: str | None = None, p
         "final": None,
         "_provider": provider,
     }
-    result = _compiled_graph().invoke(initial_state, config={"recursion_limit": 50})
-    return result["final"]
+
+
+def _trace_metadata(final: Optional[dict], provider: Optional[str]) -> dict:
+    return {
+        "action": final["action"] if final else None,
+        "gate_overridden": final["gate_overridden"] if final else None,
+        "gate_reason": final["gate_reason"] if final else None,
+        "tools_called": final["tools_called"] if final else None,
+        "provider": provider or config.LLM_PROVIDER,
+    }
+
+
+def run_triage(subject: str | None, body: str, customer_id: str | None = None, provider: str | None = None) -> dict:
+    """Runs one ticket through the full agent loop. Returns a GatedDecision dict (see app/agent/schemas.py)."""
+    state = _initial_state(subject, body, customer_id, provider)
+    run_config = {"recursion_limit": 50}
+    handler = tracing.get_callback_handler()
+    langfuse = tracing.get_langfuse()
+    if handler is None or langfuse is None:
+        return _compiled_graph().invoke(state, config=run_config)["final"]
+
+    run_config["callbacks"] = [handler]
+    with langfuse.start_as_current_observation(
+        name="triage_agent", as_type="span",
+        input={"subject": subject, "body": body, "customer_id": customer_id},
+    ) as span:
+        final = _compiled_graph().invoke(state, config=run_config)["final"]
+        span.update(output=final, metadata=_trace_metadata(final, provider))
+    return final
+
+
+def _event_from_update(node_name: str, update: dict) -> Optional[dict]:
+    """Turns one LangGraph node's raw state update into a small, JSON-serializable event for the API/frontend."""
+    if node_name == "agent":
+        msgs = update.get("messages") or []
+        last = msgs[-1] if msgs else None
+        tool_calls = getattr(last, "tool_calls", None) if last else None
+        if tool_calls:
+            return {"type": "tool_call", "tools": [{"name": tc["name"], "args": tc["args"]} for tc in tool_calls]}
+        return {"type": "agent_note", "content": getattr(last, "content", "")} if last else None
+    if node_name == "nudge":
+        return {"type": "nudge"}
+    if node_name == "tools":
+        results = []
+        for m in update.get("messages") or []:
+            try:
+                content = json.loads(m.content)
+            except (TypeError, ValueError):
+                content = m.content
+            results.append({"tool": getattr(m, "name", None), "content": content})
+        return {"type": "tool_result", "results": results}
+    if node_name in ("gate", "fallback"):
+        final = update.get("final")
+        return {"type": "decision", "decision": final} if final else None
+    return None
+
+
+def stream_triage(subject: str | None, body: str, customer_id: str | None = None, provider: str | None = None):
+    """Generator yielding one event dict per agent step (tool calls, tool results, final decision) - the same
+    run as run_triage(), just observable step-by-step instead of returning only the end result. Synchronous/
+    blocking (like the rest of the agent stack); callers that need this alongside an async server (see
+    app/main.py) run it in a background thread and relay events onto the event loop."""
+    state = _initial_state(subject, body, customer_id, provider)
+    run_config = {"recursion_limit": 50}
+    handler = tracing.get_callback_handler()
+    langfuse = tracing.get_langfuse()
+    if handler is not None:
+        run_config["callbacks"] = [handler]
+
+    def _events():
+        for update in _compiled_graph().stream(state, config=run_config, stream_mode="updates"):
+            for node_name, node_update in update.items():
+                event = _event_from_update(node_name, node_update)
+                if event:
+                    yield event
+
+    if handler is None or langfuse is None:
+        yield from _events()
+        return
+
+    with langfuse.start_as_current_observation(
+        name="triage_agent", as_type="span",
+        input={"subject": subject, "body": body, "customer_id": customer_id},
+    ) as span:
+        final = None
+        for event in _events():
+            if event["type"] == "decision":
+                final = event["decision"]
+            yield event
+        span.update(output=final, metadata=_trace_metadata(final, provider))
