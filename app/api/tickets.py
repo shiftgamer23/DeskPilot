@@ -13,6 +13,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 
 from app.agent.triage_agent import triage_stream
+from app.infra import db
 from app.infra.run_store import Run, store
 from app.models.requests import TicketAck, TicketRequest
 
@@ -46,8 +47,11 @@ def _run_agent_in_thread(run: Run, loop: asyncio.AbstractEventLoop) -> None:
             if event["type"] == "decision":
                 final = event["decision"]
         loop.call_soon_threadsafe(store.finish, run.run_id, final)
+        db.update_run(run.run_id, "done", result=final)  # plain blocking I/O, safe from this thread
     except Exception as e:
-        loop.call_soon_threadsafe(store.fail, run.run_id, f"{type(e).__name__}: {e}")
+        msg = f"{type(e).__name__}: {e}"
+        loop.call_soon_threadsafe(store.fail, run.run_id, msg)
+        db.update_run(run.run_id, "error", error=msg)
 
 
 @router.post("/tickets", response_model=TicketAck)
@@ -55,6 +59,8 @@ async def submit_ticket(req: TicketRequest) -> TicketAck:
     if not req.body or not req.body.strip():
         raise HTTPException(400, "body is required")
     run = store.create(req.subject, req.body, req.customer_id, req.provider)
+    await asyncio.to_thread(db.insert_run, run.run_id, run.subject, run.body, run.customer_id, run.provider,
+                             run.status, run.created_at)
     loop = asyncio.get_running_loop()  # must be captured on the event loop thread, before the background thread starts
     threading.Thread(target=_run_agent_in_thread, args=(run, loop), daemon=True).start()
     return TicketAck(run_id=run.run_id, status=run.status)

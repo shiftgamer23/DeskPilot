@@ -85,5 +85,10 @@ class RunStore:
         for q in run.subscribers:
             q.put_nowait({"type": "end", "status": "error", "error": error})
 
+    def hydrate(self, run: Run) -> None:
+        """Seeds a run reloaded from persistent storage (app/infra/db.py) at startup. Never overwrites an
+        already-known run_id, so this is safe to call before any live traffic arrives."""
+        self._runs.setdefault(run.run_id, run)
+
 
 store = RunStore()  # single process-wide instance

@@ -16,3 +16,6 @@ fastapi
 uvicorn[standard]
 redis
 langfuse
+
+# Deployment (persistence)
+psycopg[binary]

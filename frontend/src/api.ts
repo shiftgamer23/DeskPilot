@@ -1,7 +1,9 @@
 import type { TicketAck, TicketDetail, TicketSummary } from "./types"
 
-// Proxied by Vite in dev (see vite.config.ts) straight to the FastAPI backend on :8000.
-const BASE = "/api"
+// Dev: "/api", proxied by Vite (see vite.config.ts) straight to the FastAPI backend on :8000.
+// Prod: VITE_API_BASE_URL is the deployed backend's own origin (e.g. https://<app>.onrender.com) -
+// there's no proxy in production and the backend's routes have no /api prefix of their own.
+const BASE = import.meta.env.VITE_API_BASE_URL ?? "/api"
 
 export interface SubmitTicketInput {
   subject?: string | null
