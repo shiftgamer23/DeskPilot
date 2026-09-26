@@ -51,6 +51,9 @@ MAX_AGENT_TURNS = 6  # safety cap on the tool-calling loop
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379/0")
 CACHE_TTL_SECONDS = int(os.getenv("CACHE_TTL_SECONDS", str(7 * 24 * 3600)))  # 7 days
 
+# --- Persistence (ticket run history; optional - unset means in-memory only, see app/infra/db.py) ---
+DATABASE_URL = os.getenv("DATABASE_URL")
+
 # --- Observability (Phase 6) ---
 LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY")
 LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY")

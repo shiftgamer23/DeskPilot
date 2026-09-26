@@ -43,7 +43,9 @@ def build_key(subject: str | None, body: str, customer_id: str | None, provider:
     providers can legitimately produce different decisions for the same ticket - keying only on
     text+customer_id would let a Gemini run silently serve a cached Groq answer, or vice versa."""
     def norm(s: str | None) -> str:
-        return " ".join((s or "").split()).lower()
+        # Real historical tickets can have a missing subject, which pandas represents as float('nan') -
+        # truthy, so `s or ""` doesn't catch it. Anything that isn't actually a str is treated as absent.
+        return " ".join((s if isinstance(s, str) else "").split()).lower()
 
     resolved_provider = (provider or config.LLM_PROVIDER).lower()
     raw = f"{norm(subject)}\x1f{norm(body)}\x1f{customer_id or ''}\x1f{resolved_provider}"
