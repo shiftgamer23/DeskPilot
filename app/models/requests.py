@@ -13,3 +13,7 @@ class TicketRequest(BaseModel):
 class TicketAck(BaseModel):
     run_id: str
     status: str
+
+
+class TranscriptResponse(BaseModel):
+    text: str

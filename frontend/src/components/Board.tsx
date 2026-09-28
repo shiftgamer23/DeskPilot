@@ -1,7 +1,7 @@
 import { LayoutGroup, motion } from "framer-motion"
 import { AlertTriangle, Bot, CheckCircle2, Inbox, Sparkles, TrendingUp } from "lucide-react"
-import { useEffect, useState } from "react"
-import { listTickets, streamUrl } from "../api"
+import { useEffect, useRef, useState } from "react"
+import { fetchVoiceReply, listTickets, streamUrl } from "../api"
 import { useSSE } from "../hooks/useSSE"
 import { activityForTool } from "../lib/activity"
 import type { StreamEvent, TicketSummary } from "../types"
@@ -68,6 +68,20 @@ export function Board() {
   const [tickets, setTickets] = useState<Record<string, CardData>>({})
   const [liveIds, setLiveIds] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
+  // Tickets that were spoken rather than typed - their routing result gets read back aloud when they finish.
+  const voiceRuns = useRef(new Set<string>())
+  const [voiceError, setVoiceError] = useState<string | null>(null)
+
+  async function speakReply(runId: string) {
+    try {
+      const url = URL.createObjectURL(await fetchVoiceReply(runId))
+      const audio = new Audio(url)
+      audio.onended = () => URL.revokeObjectURL(url)
+      await audio.play()
+    } catch (err) {
+      setVoiceError(err instanceof Error ? err.message : "Couldn't play the voice reply")
+    }
+  }
 
   useEffect(() => {
     listTickets()
@@ -77,7 +91,17 @@ export function Board() {
       .finally(() => setLoading(false))
   }, [])
 
-  function handleSubmitted(runId: string, subject: string | null, body: string, customerId: string | null) {
+  function handleSubmitted(
+    runId: string,
+    subject: string | null,
+    body: string,
+    customerId: string | null,
+    viaVoice: boolean,
+  ) {
+    if (viaVoice) {
+      voiceRuns.current.add(runId)
+      setVoiceError(null)
+    }
     setTickets((prev) => ({
       ...prev,
       [runId]: {
@@ -104,6 +128,7 @@ export function Board() {
     } else if (event.type === "end") {
       setTickets((prev) => ({ ...prev, [runId]: { ...prev[runId], status: event.status } }))
       setLiveIds((prev) => prev.filter((id) => id !== runId))
+      if (voiceRuns.current.delete(runId) && event.status === "done") void speakReply(runId)
     }
   }
 
@@ -169,6 +194,7 @@ export function Board() {
 
         <motion.div variants={fadeUp}>
           <TicketForm onSubmitted={handleSubmitted} />
+          {voiceError && <p className="mt-2 px-1 text-xs text-rose-400">Voice reply unavailable: {voiceError}</p>}
         </motion.div>
 
         {liveIds.map((id) => (

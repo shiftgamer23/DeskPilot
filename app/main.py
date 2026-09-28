@@ -7,6 +7,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.tickets import router as tickets_router
+from app.api.voice import router as voice_router
 from app.infra import db, tracing
 from app.infra.run_store import Run, store
 
@@ -34,3 +35,4 @@ app.add_middleware(
 )
 
 app.include_router(tickets_router)
+app.include_router(voice_router)

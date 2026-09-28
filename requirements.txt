@@ -16,6 +16,10 @@ fastapi
 uvicorn[standard]
 redis
 langfuse
+langchain  # langfuse.langchain.CallbackHandler needs the full package, not just langchain-core
 
 # Deployment (persistence)
 psycopg[binary]
+
+# Voice mode (Sarvam AI REST client)
+httpx

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.git/
+.env
+.chroma/
+frontend/
+node_modules/
+eval/
+scratch/
+data/raw/
+data/index/
+data/download_raw.py
+data/generate_customer_profiles.py

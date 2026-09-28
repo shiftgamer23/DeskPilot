@@ -54,6 +54,13 @@ CACHE_TTL_SECONDS = int(os.getenv("CACHE_TTL_SECONDS", str(7 * 24 * 3600)))  # 7
 # --- Persistence (ticket run history; optional - unset means in-memory only, see app/infra/db.py) ---
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+# --- Voice mode (Sarvam AI, English only - see app/infra/voice.py). Unset key = voice endpoints return 503. ---
+SARVAM_API_KEY = os.getenv("SARVAM_API_KEY")
+SARVAM_STT_MODEL = os.getenv("SARVAM_STT_MODEL", "saaras:v3")
+SARVAM_TTS_MODEL = os.getenv("SARVAM_TTS_MODEL", "bulbul:v3")
+SARVAM_TTS_SPEAKER = os.getenv("SARVAM_TTS_SPEAKER", "shubh")
+VOICE_LANGUAGE = "en-IN"
+
 # --- Observability (Phase 6) ---
 LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY")
 LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY")
