@@ -1,6 +1,7 @@
 import { LayoutGroup, motion } from "framer-motion"
 import { AlertTriangle, Bot, CheckCircle2, Inbox, Sparkles, TrendingUp } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { Link } from "react-router-dom"
 import { fetchVoiceReply, listTickets, streamUrl } from "../api"
 import { useSSE } from "../hooks/useSSE"
 import { activityForTool } from "../lib/activity"
@@ -157,11 +158,14 @@ export function Board() {
         className="mx-auto flex max-w-[1400px] flex-col gap-5"
       >
         <motion.div variants={fadeUp} className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/30">
+          <Link
+            to="/"
+            className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/30 transition-transform hover:scale-105"
+          >
             <Bot size={20} className="text-white" />
-          </div>
+          </Link>
           <div>
-            <h1 className="text-lg font-bold text-gray-100">Ticket Triage Agent</h1>
+            <h1 className="text-lg font-bold text-gray-100">DeskPilot</h1>
             <p className="text-xs text-gray-500">Submit a ticket and watch it get investigated, decided, and routed live.</p>
           </div>
           <span className="ml-auto flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-medium text-emerald-400">

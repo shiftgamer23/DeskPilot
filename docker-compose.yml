@@ -1,0 +1,21 @@
+# Local dev infra only - not used in production (see DEPLOY.md, which uses Neon Postgres instead).
+# Matches app/infra/db.py's expectations: set DATABASE_URL in your local .env to
+#   postgresql://postgres:<POSTGRES_PASSWORD below>@localhost:5433/ticket_triage
+# Run: docker compose up -d
+# POSTGRES_PASSWORD reads from a POSTGRES_PASSWORD var in .env if you set one there (compose loads
+# .env automatically), else falls back to "localdev" - a real value never needs to be committed here.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: ticket-triage-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-localdev}
+      POSTGRES_DB: ticket_triage
+    ports:
+      - "5433:5432"  # 5432 is often already taken by a native Postgres install - see DEPLOY.md
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
