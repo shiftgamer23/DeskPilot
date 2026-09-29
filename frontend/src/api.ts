@@ -40,3 +40,26 @@ export async function getTicket(runId: string): Promise<TicketDetail> {
 export function streamUrl(runId: string): string {
   return `${BASE}/tickets/${runId}/stream`
 }
+
+async function errorDetail(res: Response, fallback: string): Promise<string> {
+  const detail = await res.json().catch(() => ({}))
+  return typeof detail.detail === "string" ? detail.detail : `${fallback} (${res.status})`
+}
+
+/** Sends the raw recorded audio as the request body (no multipart) and returns the English transcript. */
+export async function transcribeAudio(audio: Blob): Promise<string> {
+  const res = await fetch(`${BASE}/voice/transcribe`, {
+    method: "POST",
+    headers: { "Content-Type": audio.type || "audio/webm" },
+    body: audio,
+  })
+  if (!res.ok) throw new Error(await errorDetail(res, "Transcription failed"))
+  return (await res.json()).text
+}
+
+/** Audio of the agent telling the customer where their ticket was routed; only exists once the run is done. */
+export async function fetchVoiceReply(runId: string): Promise<Blob> {
+  const res = await fetch(`${BASE}/tickets/${runId}/voice`)
+  if (!res.ok) throw new Error(await errorDetail(res, "Voice reply failed"))
+  return res.blob()
+}
